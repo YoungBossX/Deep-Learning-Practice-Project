@@ -1,0 +1,322 @@
+02/23/2025 00:16:26 - INFO - __main__ -   ******  Loading dataset...  ******
+02/23/2025 00:16:26 - INFO - data_loader -   Start loading the Train_Dataset!
+02/23/2025 00:16:26 - INFO - data_loader -   Num of train_dataset examples: 60000
+02/23/2025 00:16:26 - INFO - data_loader -   Start loading the Test_Dataset!
+02/23/2025 00:16:26 - INFO - data_loader -   Num of test_dataset examples: 10000
+02/23/2025 00:16:26 - INFO - __main__ -   ******  The dataset is loaded!  ******
+
+02/23/2025 00:16:26 - INFO - __main__ -   ******  Start building the model...  ******
+02/23/2025 00:16:26 - INFO - __main__ -   The structure of the model:
+Net(
+  (conv1): Sequential(
+    (0): Conv2d(1, 16, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(16, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Flatten(start_dim=1, end_dim=-1)
+  )
+  (fc1): Sequential(
+    (0): Linear(in_features=1568, out_features=128, bias=True)
+    (1): ReLU()
+  )
+  (fc2): Sequential(
+    (0): Linear(in_features=128, out_features=10, bias=True)
+  )
+)
+02/23/2025 00:16:26 - INFO - __main__ -   ******  The model is built!  ******
+
+02/23/2025 00:16:27 - INFO - trainer -   ******  Running training  ******
+02/23/2025 00:16:27 - INFO - trainer -     Num examples = 60000
+02/23/2025 00:16:27 - INFO - trainer -     Num Epochs = 10
+02/23/2025 00:16:27 - INFO - trainer -     Batch size = 32
+02/23/2025 00:16:27 - INFO - trainer -   
+-------------------- Epoch: 1 --------------------
+02/23/2025 00:16:29 - INFO - trainer -   Epoch: 1 | Step: 200 | train loss: 0.1223 | test accuracy: 0.954
+02/23/2025 00:16:30 - INFO - trainer -   Epoch: 1 | Step: 400 | train loss: 0.0577 | test accuracy: 0.972
+02/23/2025 00:16:32 - INFO - trainer -   Epoch: 1 | Step: 600 | train loss: 0.1596 | test accuracy: 0.980
+02/23/2025 00:16:33 - INFO - trainer -   Epoch: 1 | Step: 800 | train loss: 0.0088 | test accuracy: 0.976
+02/23/2025 00:16:34 - INFO - trainer -   Epoch: 1 | Step: 1000 | train loss: 0.0389 | test accuracy: 0.983
+02/23/2025 00:16:36 - INFO - trainer -   Epoch: 1 | Step: 1200 | train loss: 0.1240 | test accuracy: 0.984
+02/23/2025 00:16:37 - INFO - trainer -   Epoch: 1 | Step: 1400 | train loss: 0.0052 | test accuracy: 0.986
+02/23/2025 00:16:39 - INFO - trainer -   Epoch: 1 | Step: 1600 | train loss: 0.0340 | test accuracy: 0.985
+02/23/2025 00:16:40 - INFO - trainer -   Epoch: 1 | Step: 1800 | train loss: 0.0509 | test accuracy: 0.985
+02/23/2025 00:16:41 - INFO - trainer -   
+-------------------- Epoch: 2 --------------------
+02/23/2025 00:16:42 - INFO - trainer -   Epoch: 2 | Step: 200 | train loss: 0.0761 | test accuracy: 0.983
+02/23/2025 00:16:44 - INFO - trainer -   Epoch: 2 | Step: 400 | train loss: 0.0056 | test accuracy: 0.988
+02/23/2025 00:16:45 - INFO - trainer -   Epoch: 2 | Step: 600 | train loss: 0.0253 | test accuracy: 0.987
+02/23/2025 00:16:47 - INFO - trainer -   Epoch: 2 | Step: 800 | train loss: 0.0183 | test accuracy: 0.983
+02/23/2025 00:16:48 - INFO - trainer -   Epoch: 2 | Step: 1000 | train loss: 0.0033 | test accuracy: 0.988
+02/23/2025 00:16:50 - INFO - trainer -   Epoch: 2 | Step: 1200 | train loss: 0.1678 | test accuracy: 0.984
+02/23/2025 00:16:51 - INFO - trainer -   Epoch: 2 | Step: 1400 | train loss: 0.0236 | test accuracy: 0.987
+02/23/2025 00:16:53 - INFO - trainer -   Epoch: 2 | Step: 1600 | train loss: 0.0029 | test accuracy: 0.989
+02/23/2025 00:16:54 - INFO - trainer -   Epoch: 2 | Step: 1800 | train loss: 0.0854 | test accuracy: 0.988
+02/23/2025 00:16:55 - INFO - trainer -   
+-------------------- Epoch: 3 --------------------
+02/23/2025 00:16:56 - INFO - trainer -   Epoch: 3 | Step: 200 | train loss: 0.0320 | test accuracy: 0.989
+02/23/2025 00:16:57 - INFO - trainer -   Epoch: 3 | Step: 400 | train loss: 0.0032 | test accuracy: 0.988
+02/23/2025 00:16:59 - INFO - trainer -   Epoch: 3 | Step: 600 | train loss: 0.0009 | test accuracy: 0.991
+02/23/2025 00:17:00 - INFO - trainer -   Epoch: 3 | Step: 800 | train loss: 0.0022 | test accuracy: 0.990
+02/23/2025 00:17:02 - INFO - trainer -   Epoch: 3 | Step: 1000 | train loss: 0.0001 | test accuracy: 0.991
+02/23/2025 00:17:03 - INFO - trainer -   Epoch: 3 | Step: 1200 | train loss: 0.0090 | test accuracy: 0.989
+02/23/2025 00:17:05 - INFO - trainer -   Epoch: 3 | Step: 1400 | train loss: 0.0647 | test accuracy: 0.988
+02/23/2025 00:17:06 - INFO - trainer -   Epoch: 3 | Step: 1600 | train loss: 0.0006 | test accuracy: 0.988
+02/23/2025 00:17:08 - INFO - trainer -   Epoch: 3 | Step: 1800 | train loss: 0.1635 | test accuracy: 0.987
+02/23/2025 00:17:08 - INFO - trainer -   
+-------------------- Epoch: 4 --------------------
+02/23/2025 00:17:09 - INFO - trainer -   Epoch: 4 | Step: 200 | train loss: 0.0000 | test accuracy: 0.993
+02/23/2025 00:17:11 - INFO - trainer -   Epoch: 4 | Step: 400 | train loss: 0.0015 | test accuracy: 0.988
+02/23/2025 00:17:12 - INFO - trainer -   Epoch: 4 | Step: 600 | train loss: 0.0171 | test accuracy: 0.989
+02/23/2025 00:17:14 - INFO - trainer -   Epoch: 4 | Step: 800 | train loss: 0.0001 | test accuracy: 0.990
+02/23/2025 00:17:16 - INFO - trainer -   Epoch: 4 | Step: 1000 | train loss: 0.0205 | test accuracy: 0.991
+02/23/2025 00:17:17 - INFO - trainer -   Epoch: 4 | Step: 1200 | train loss: 0.0367 | test accuracy: 0.990
+02/23/2025 00:17:19 - INFO - trainer -   Epoch: 4 | Step: 1400 | train loss: 0.0024 | test accuracy: 0.987
+02/23/2025 00:17:20 - INFO - trainer -   Epoch: 4 | Step: 1600 | train loss: 0.0212 | test accuracy: 0.992
+02/23/2025 00:17:22 - INFO - trainer -   Epoch: 4 | Step: 1800 | train loss: 0.0004 | test accuracy: 0.991
+02/23/2025 00:17:22 - INFO - trainer -   
+-------------------- Epoch: 5 --------------------
+02/23/2025 00:17:23 - INFO - trainer -   Epoch: 5 | Step: 200 | train loss: 0.0007 | test accuracy: 0.990
+02/23/2025 00:17:25 - INFO - trainer -   Epoch: 5 | Step: 400 | train loss: 0.0011 | test accuracy: 0.990
+02/23/2025 00:17:26 - INFO - trainer -   Epoch: 5 | Step: 600 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:17:28 - INFO - trainer -   Epoch: 5 | Step: 800 | train loss: 0.0002 | test accuracy: 0.990
+02/23/2025 00:17:29 - INFO - trainer -   Epoch: 5 | Step: 1000 | train loss: 0.0624 | test accuracy: 0.990
+02/23/2025 00:17:31 - INFO - trainer -   Epoch: 5 | Step: 1200 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:17:32 - INFO - trainer -   Epoch: 5 | Step: 1400 | train loss: 0.0013 | test accuracy: 0.991
+02/23/2025 00:17:34 - INFO - trainer -   Epoch: 5 | Step: 1600 | train loss: 0.0015 | test accuracy: 0.991
+02/23/2025 00:17:35 - INFO - trainer -   Epoch: 5 | Step: 1800 | train loss: 0.0635 | test accuracy: 0.990
+02/23/2025 00:17:35 - INFO - trainer -   
+-------------------- Epoch: 6 --------------------
+02/23/2025 00:17:37 - INFO - trainer -   Epoch: 6 | Step: 200 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:17:38 - INFO - trainer -   Epoch: 6 | Step: 400 | train loss: 0.0004 | test accuracy: 0.989
+02/23/2025 00:17:40 - INFO - trainer -   Epoch: 6 | Step: 600 | train loss: 0.0001 | test accuracy: 0.992
+02/23/2025 00:17:41 - INFO - trainer -   Epoch: 6 | Step: 800 | train loss: 0.0023 | test accuracy: 0.988
+02/23/2025 00:17:43 - INFO - trainer -   Epoch: 6 | Step: 1000 | train loss: 0.0001 | test accuracy: 0.991
+02/23/2025 00:17:44 - INFO - trainer -   Epoch: 6 | Step: 1200 | train loss: 0.0079 | test accuracy: 0.991
+02/23/2025 00:17:45 - INFO - trainer -   Epoch: 6 | Step: 1400 | train loss: 0.0000 | test accuracy: 0.990
+02/23/2025 00:17:47 - INFO - trainer -   Epoch: 6 | Step: 1600 | train loss: 0.0064 | test accuracy: 0.992
+02/23/2025 00:17:48 - INFO - trainer -   Epoch: 6 | Step: 1800 | train loss: 0.0005 | test accuracy: 0.989
+02/23/2025 00:17:49 - INFO - trainer -   
+-------------------- Epoch: 7 --------------------
+02/23/2025 00:17:50 - INFO - trainer -   Epoch: 7 | Step: 200 | train loss: 0.0014 | test accuracy: 0.991
+02/23/2025 00:17:52 - INFO - trainer -   Epoch: 7 | Step: 400 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:17:53 - INFO - trainer -   Epoch: 7 | Step: 600 | train loss: 0.0000 | test accuracy: 0.990
+02/23/2025 00:17:54 - INFO - trainer -   Epoch: 7 | Step: 800 | train loss: 0.0001 | test accuracy: 0.992
+02/23/2025 00:17:56 - INFO - trainer -   Epoch: 7 | Step: 1000 | train loss: 0.0035 | test accuracy: 0.989
+02/23/2025 00:17:57 - INFO - trainer -   Epoch: 7 | Step: 1200 | train loss: 0.0000 | test accuracy: 0.992
+02/23/2025 00:17:59 - INFO - trainer -   Epoch: 7 | Step: 1400 | train loss: 0.0024 | test accuracy: 0.991
+02/23/2025 00:18:00 - INFO - trainer -   Epoch: 7 | Step: 1600 | train loss: 0.0622 | test accuracy: 0.990
+02/23/2025 00:18:02 - INFO - trainer -   Epoch: 7 | Step: 1800 | train loss: 0.0002 | test accuracy: 0.990
+02/23/2025 00:18:02 - INFO - trainer -   
+-------------------- Epoch: 8 --------------------
+02/23/2025 00:18:03 - INFO - trainer -   Epoch: 8 | Step: 200 | train loss: 0.0000 | test accuracy: 0.992
+02/23/2025 00:18:05 - INFO - trainer -   Epoch: 8 | Step: 400 | train loss: 0.0040 | test accuracy: 0.987
+02/23/2025 00:18:06 - INFO - trainer -   Epoch: 8 | Step: 600 | train loss: 0.0008 | test accuracy: 0.990
+02/23/2025 00:18:08 - INFO - trainer -   Epoch: 8 | Step: 800 | train loss: 0.0000 | test accuracy: 0.990
+02/23/2025 00:18:09 - INFO - trainer -   Epoch: 8 | Step: 1000 | train loss: 0.0001 | test accuracy: 0.992
+02/23/2025 00:18:11 - INFO - trainer -   Epoch: 8 | Step: 1200 | train loss: 0.0002 | test accuracy: 0.991
+02/23/2025 00:18:12 - INFO - trainer -   Epoch: 8 | Step: 1400 | train loss: 0.0000 | test accuracy: 0.992
+02/23/2025 00:18:14 - INFO - trainer -   Epoch: 8 | Step: 1600 | train loss: 0.0006 | test accuracy: 0.991
+02/23/2025 00:18:15 - INFO - trainer -   Epoch: 8 | Step: 1800 | train loss: 0.0005 | test accuracy: 0.991
+02/23/2025 00:18:15 - INFO - trainer -   
+-------------------- Epoch: 9 --------------------
+02/23/2025 00:18:17 - INFO - trainer -   Epoch: 9 | Step: 200 | train loss: 0.0367 | test accuracy: 0.990
+02/23/2025 00:18:18 - INFO - trainer -   Epoch: 9 | Step: 400 | train loss: 0.0010 | test accuracy: 0.993
+02/23/2025 00:18:20 - INFO - trainer -   Epoch: 9 | Step: 600 | train loss: 0.0001 | test accuracy: 0.991
+02/23/2025 00:18:21 - INFO - trainer -   Epoch: 9 | Step: 800 | train loss: 0.0586 | test accuracy: 0.992
+02/23/2025 00:18:23 - INFO - trainer -   Epoch: 9 | Step: 1000 | train loss: 0.0000 | test accuracy: 0.992
+02/23/2025 00:18:24 - INFO - trainer -   Epoch: 9 | Step: 1200 | train loss: 0.0001 | test accuracy: 0.992
+02/23/2025 00:18:26 - INFO - trainer -   Epoch: 9 | Step: 1400 | train loss: 0.1565 | test accuracy: 0.992
+02/23/2025 00:18:27 - INFO - trainer -   Epoch: 9 | Step: 1600 | train loss: 0.0050 | test accuracy: 0.991
+02/23/2025 00:18:29 - INFO - trainer -   Epoch: 9 | Step: 1800 | train loss: 0.0002 | test accuracy: 0.992
+02/23/2025 00:18:29 - INFO - trainer -   
+-------------------- Epoch: 10 --------------------
+02/23/2025 00:18:30 - INFO - trainer -   Epoch: 10 | Step: 200 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:18:32 - INFO - trainer -   Epoch: 10 | Step: 400 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:18:33 - INFO - trainer -   Epoch: 10 | Step: 600 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:18:35 - INFO - trainer -   Epoch: 10 | Step: 800 | train loss: 0.0004 | test accuracy: 0.988
+02/23/2025 00:18:36 - INFO - trainer -   Epoch: 10 | Step: 1000 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:18:38 - INFO - trainer -   Epoch: 10 | Step: 1200 | train loss: 0.0002 | test accuracy: 0.992
+02/23/2025 00:18:39 - INFO - trainer -   Epoch: 10 | Step: 1400 | train loss: 0.0006 | test accuracy: 0.992
+02/23/2025 00:18:41 - INFO - trainer -   Epoch: 10 | Step: 1600 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:18:42 - INFO - trainer -   Epoch: 10 | Step: 1800 | train loss: 0.0000 | test accuracy: 0.992
+02/23/2025 00:22:39 - INFO - __main__ -   ******  Loading dataset...  ******
+02/23/2025 00:22:39 - INFO - data_loader -   Start loading the Train_Dataset!
+02/23/2025 00:22:39 - INFO - data_loader -   Num of train_dataset examples: 60000
+02/23/2025 00:22:39 - INFO - data_loader -   Start loading the Test_Dataset!
+02/23/2025 00:22:39 - INFO - data_loader -   Num of test_dataset examples: 10000
+02/23/2025 00:22:39 - INFO - __main__ -   ******  The dataset is loaded!  ******
+
+02/23/2025 00:22:39 - INFO - __main__ -   ******  Start building the model...  ******
+02/23/2025 00:22:39 - INFO - __main__ -   The structure of the model:
+Net(
+  (conv1): Sequential(
+    (0): Conv2d(1, 16, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(16, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Flatten(start_dim=1, end_dim=-1)
+  )
+  (fc1): Sequential(
+    (0): Linear(in_features=1568, out_features=128, bias=True)
+    (1): ReLU()
+  )
+  (fc2): Sequential(
+    (0): Linear(in_features=128, out_features=10, bias=True)
+  )
+)
+02/23/2025 00:22:39 - INFO - __main__ -   ******  The model is built!  ******
+
+02/23/2025 00:22:39 - INFO - trainer -   ******  Running training  ******
+02/23/2025 00:22:39 - INFO - trainer -     Num examples = 60000
+02/23/2025 00:22:39 - INFO - trainer -     Num Epochs = 10
+02/23/2025 00:22:39 - INFO - trainer -     Batch size = 32
+02/23/2025 00:22:39 - INFO - trainer -   
+-------------------- Epoch: 1 --------------------
+02/23/2025 00:22:41 - INFO - trainer -   Epoch: 1 | Step: 200 | train loss: 0.1223 | test accuracy: 0.954
+02/23/2025 00:22:42 - INFO - trainer -   Epoch: 1 | Step: 400 | train loss: 0.0577 | test accuracy: 0.972
+02/23/2025 00:22:44 - INFO - trainer -   Epoch: 1 | Step: 600 | train loss: 0.1596 | test accuracy: 0.980
+02/23/2025 00:22:45 - INFO - trainer -   Epoch: 1 | Step: 800 | train loss: 0.0088 | test accuracy: 0.976
+02/23/2025 00:22:47 - INFO - trainer -   Epoch: 1 | Step: 1000 | train loss: 0.0389 | test accuracy: 0.983
+02/23/2025 00:22:51 - INFO - trainer -   Epoch: 1 | Step: 1200 | train loss: 0.1240 | test accuracy: 0.984
+02/23/2025 00:22:55 - INFO - trainer -   Epoch: 1 | Step: 1400 | train loss: 0.0052 | test accuracy: 0.986
+02/23/2025 00:23:00 - INFO - trainer -   Epoch: 1 | Step: 1600 | train loss: 0.0340 | test accuracy: 0.985
+02/23/2025 00:23:04 - INFO - trainer -   Epoch: 1 | Step: 1800 | train loss: 0.0509 | test accuracy: 0.985
+02/23/2025 00:23:05 - INFO - trainer -   
+-------------------- Epoch: 2 --------------------
+02/23/2025 00:23:10 - INFO - trainer -   Epoch: 2 | Step: 200 | train loss: 0.0761 | test accuracy: 0.983
+02/23/2025 00:23:14 - INFO - trainer -   Epoch: 2 | Step: 400 | train loss: 0.0056 | test accuracy: 0.988
+02/23/2025 00:23:19 - INFO - trainer -   Epoch: 2 | Step: 600 | train loss: 0.0253 | test accuracy: 0.987
+02/23/2025 00:23:22 - INFO - trainer -   Epoch: 2 | Step: 800 | train loss: 0.0183 | test accuracy: 0.983
+02/23/2025 00:23:27 - INFO - trainer -   Epoch: 2 | Step: 1000 | train loss: 0.0033 | test accuracy: 0.988
+02/23/2025 00:23:28 - INFO - trainer -   Epoch: 2 | Step: 1200 | train loss: 0.1678 | test accuracy: 0.984
+02/23/2025 00:23:30 - INFO - trainer -   Epoch: 2 | Step: 1400 | train loss: 0.0236 | test accuracy: 0.987
+02/23/2025 00:23:31 - INFO - trainer -   Epoch: 2 | Step: 1600 | train loss: 0.0029 | test accuracy: 0.989
+02/23/2025 00:23:33 - INFO - trainer -   Epoch: 2 | Step: 1800 | train loss: 0.0854 | test accuracy: 0.988
+02/23/2025 00:23:33 - INFO - trainer -   
+-------------------- Epoch: 3 --------------------
+02/23/2025 00:23:35 - INFO - trainer -   Epoch: 3 | Step: 200 | train loss: 0.0320 | test accuracy: 0.989
+02/23/2025 00:23:36 - INFO - trainer -   Epoch: 3 | Step: 400 | train loss: 0.0032 | test accuracy: 0.988
+02/23/2025 00:23:38 - INFO - trainer -   Epoch: 3 | Step: 600 | train loss: 0.0009 | test accuracy: 0.991
+02/23/2025 00:23:39 - INFO - trainer -   Epoch: 3 | Step: 800 | train loss: 0.0022 | test accuracy: 0.990
+02/23/2025 00:23:41 - INFO - trainer -   Epoch: 3 | Step: 1000 | train loss: 0.0001 | test accuracy: 0.991
+02/23/2025 00:23:42 - INFO - trainer -   Epoch: 3 | Step: 1200 | train loss: 0.0090 | test accuracy: 0.989
+02/23/2025 00:23:43 - INFO - trainer -   Epoch: 3 | Step: 1400 | train loss: 0.0647 | test accuracy: 0.988
+02/23/2025 00:23:45 - INFO - trainer -   Epoch: 3 | Step: 1600 | train loss: 0.0006 | test accuracy: 0.988
+02/23/2025 00:23:46 - INFO - trainer -   Epoch: 3 | Step: 1800 | train loss: 0.1635 | test accuracy: 0.987
+02/23/2025 00:23:47 - INFO - trainer -   
+-------------------- Epoch: 4 --------------------
+02/23/2025 00:23:48 - INFO - trainer -   Epoch: 4 | Step: 200 | train loss: 0.0000 | test accuracy: 0.993
+02/23/2025 00:23:50 - INFO - trainer -   Epoch: 4 | Step: 400 | train loss: 0.0015 | test accuracy: 0.988
+02/23/2025 00:23:51 - INFO - trainer -   Epoch: 4 | Step: 600 | train loss: 0.0171 | test accuracy: 0.989
+02/23/2025 00:23:53 - INFO - trainer -   Epoch: 4 | Step: 800 | train loss: 0.0001 | test accuracy: 0.990
+02/23/2025 00:23:54 - INFO - trainer -   Epoch: 4 | Step: 1000 | train loss: 0.0205 | test accuracy: 0.991
+02/23/2025 00:23:56 - INFO - trainer -   Epoch: 4 | Step: 1200 | train loss: 0.0367 | test accuracy: 0.990
+02/23/2025 00:23:57 - INFO - trainer -   Epoch: 4 | Step: 1400 | train loss: 0.0024 | test accuracy: 0.987
+02/23/2025 00:23:59 - INFO - trainer -   Epoch: 4 | Step: 1600 | train loss: 0.0212 | test accuracy: 0.992
+02/23/2025 00:24:00 - INFO - trainer -   Epoch: 4 | Step: 1800 | train loss: 0.0004 | test accuracy: 0.991
+02/23/2025 00:24:00 - INFO - trainer -   
+-------------------- Epoch: 5 --------------------
+02/23/2025 00:24:02 - INFO - trainer -   Epoch: 5 | Step: 200 | train loss: 0.0007 | test accuracy: 0.990
+02/23/2025 00:24:03 - INFO - trainer -   Epoch: 5 | Step: 400 | train loss: 0.0011 | test accuracy: 0.990
+02/23/2025 00:24:05 - INFO - trainer -   Epoch: 5 | Step: 600 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:24:07 - INFO - trainer -   Epoch: 5 | Step: 800 | train loss: 0.0002 | test accuracy: 0.990
+02/23/2025 00:24:08 - INFO - trainer -   Epoch: 5 | Step: 1000 | train loss: 0.0624 | test accuracy: 0.990
+02/23/2025 00:24:10 - INFO - trainer -   Epoch: 5 | Step: 1200 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:24:11 - INFO - trainer -   Epoch: 5 | Step: 1400 | train loss: 0.0013 | test accuracy: 0.991
+02/23/2025 00:24:13 - INFO - trainer -   Epoch: 5 | Step: 1600 | train loss: 0.0015 | test accuracy: 0.991
+02/23/2025 00:24:14 - INFO - trainer -   Epoch: 5 | Step: 1800 | train loss: 0.0635 | test accuracy: 0.990
+02/23/2025 00:24:14 - INFO - trainer -   
+-------------------- Epoch: 6 --------------------
+02/23/2025 00:24:16 - INFO - trainer -   Epoch: 6 | Step: 200 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:24:17 - INFO - trainer -   Epoch: 6 | Step: 400 | train loss: 0.0004 | test accuracy: 0.989
+02/23/2025 00:24:19 - INFO - trainer -   Epoch: 6 | Step: 600 | train loss: 0.0001 | test accuracy: 0.992
+02/23/2025 00:24:20 - INFO - trainer -   Epoch: 6 | Step: 800 | train loss: 0.0023 | test accuracy: 0.988
+02/23/2025 00:24:22 - INFO - trainer -   Epoch: 6 | Step: 1000 | train loss: 0.0001 | test accuracy: 0.991
+02/23/2025 00:24:23 - INFO - trainer -   Epoch: 6 | Step: 1200 | train loss: 0.0079 | test accuracy: 0.991
+02/23/2025 00:24:25 - INFO - trainer -   Epoch: 6 | Step: 1400 | train loss: 0.0000 | test accuracy: 0.990
+02/23/2025 00:24:26 - INFO - trainer -   Epoch: 6 | Step: 1600 | train loss: 0.0064 | test accuracy: 0.992
+02/23/2025 00:24:28 - INFO - trainer -   Epoch: 6 | Step: 1800 | train loss: 0.0005 | test accuracy: 0.989
+02/23/2025 00:24:28 - INFO - trainer -   
+-------------------- Epoch: 7 --------------------
+02/23/2025 00:24:30 - INFO - trainer -   Epoch: 7 | Step: 200 | train loss: 0.0014 | test accuracy: 0.991
+02/23/2025 00:24:31 - INFO - trainer -   Epoch: 7 | Step: 400 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:24:33 - INFO - trainer -   Epoch: 7 | Step: 600 | train loss: 0.0000 | test accuracy: 0.990
+02/23/2025 00:24:34 - INFO - trainer -   Epoch: 7 | Step: 800 | train loss: 0.0001 | test accuracy: 0.992
+02/23/2025 00:24:36 - INFO - trainer -   Epoch: 7 | Step: 1000 | train loss: 0.0035 | test accuracy: 0.989
+02/23/2025 00:24:37 - INFO - trainer -   Epoch: 7 | Step: 1200 | train loss: 0.0000 | test accuracy: 0.992
+02/23/2025 00:24:39 - INFO - trainer -   Epoch: 7 | Step: 1400 | train loss: 0.0024 | test accuracy: 0.991
+02/23/2025 00:24:40 - INFO - trainer -   Epoch: 7 | Step: 1600 | train loss: 0.0622 | test accuracy: 0.990
+02/23/2025 00:24:42 - INFO - trainer -   Epoch: 7 | Step: 1800 | train loss: 0.0002 | test accuracy: 0.990
+02/23/2025 00:24:42 - INFO - trainer -   
+-------------------- Epoch: 8 --------------------
+02/23/2025 00:24:44 - INFO - trainer -   Epoch: 8 | Step: 200 | train loss: 0.0000 | test accuracy: 0.992
+02/23/2025 00:24:45 - INFO - trainer -   Epoch: 8 | Step: 400 | train loss: 0.0040 | test accuracy: 0.987
+02/23/2025 00:24:47 - INFO - trainer -   Epoch: 8 | Step: 600 | train loss: 0.0008 | test accuracy: 0.990
+02/23/2025 00:24:48 - INFO - trainer -   Epoch: 8 | Step: 800 | train loss: 0.0000 | test accuracy: 0.990
+02/23/2025 00:24:50 - INFO - trainer -   Epoch: 8 | Step: 1000 | train loss: 0.0001 | test accuracy: 0.992
+02/23/2025 00:24:51 - INFO - trainer -   Epoch: 8 | Step: 1200 | train loss: 0.0002 | test accuracy: 0.991
+02/23/2025 00:24:53 - INFO - trainer -   Epoch: 8 | Step: 1400 | train loss: 0.0000 | test accuracy: 0.992
+02/23/2025 00:24:54 - INFO - trainer -   Epoch: 8 | Step: 1600 | train loss: 0.0006 | test accuracy: 0.991
+02/23/2025 00:24:56 - INFO - trainer -   Epoch: 8 | Step: 1800 | train loss: 0.0005 | test accuracy: 0.991
+02/23/2025 00:24:56 - INFO - trainer -   
+-------------------- Epoch: 9 --------------------
+02/23/2025 00:24:57 - INFO - trainer -   Epoch: 9 | Step: 200 | train loss: 0.0367 | test accuracy: 0.990
+02/23/2025 00:24:59 - INFO - trainer -   Epoch: 9 | Step: 400 | train loss: 0.0010 | test accuracy: 0.993
+02/23/2025 00:25:00 - INFO - trainer -   Epoch: 9 | Step: 600 | train loss: 0.0001 | test accuracy: 0.991
+02/23/2025 00:25:02 - INFO - trainer -   Epoch: 9 | Step: 800 | train loss: 0.0586 | test accuracy: 0.992
+02/23/2025 00:25:03 - INFO - trainer -   Epoch: 9 | Step: 1000 | train loss: 0.0000 | test accuracy: 0.992
+02/23/2025 00:25:05 - INFO - trainer -   Epoch: 9 | Step: 1200 | train loss: 0.0001 | test accuracy: 0.992
+02/23/2025 00:25:06 - INFO - trainer -   Epoch: 9 | Step: 1400 | train loss: 0.1565 | test accuracy: 0.992
+02/23/2025 00:25:08 - INFO - trainer -   Epoch: 9 | Step: 1600 | train loss: 0.0050 | test accuracy: 0.991
+02/23/2025 00:25:10 - INFO - trainer -   Epoch: 9 | Step: 1800 | train loss: 0.0002 | test accuracy: 0.992
+02/23/2025 00:25:10 - INFO - trainer -   
+-------------------- Epoch: 10 --------------------
+02/23/2025 00:25:11 - INFO - trainer -   Epoch: 10 | Step: 200 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:25:13 - INFO - trainer -   Epoch: 10 | Step: 400 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:25:14 - INFO - trainer -   Epoch: 10 | Step: 600 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:25:16 - INFO - trainer -   Epoch: 10 | Step: 800 | train loss: 0.0004 | test accuracy: 0.988
+02/23/2025 00:25:17 - INFO - trainer -   Epoch: 10 | Step: 1000 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:25:18 - INFO - trainer -   Epoch: 10 | Step: 1200 | train loss: 0.0002 | test accuracy: 0.992
+02/23/2025 00:25:20 - INFO - trainer -   Epoch: 10 | Step: 1400 | train loss: 0.0006 | test accuracy: 0.992
+02/23/2025 00:25:21 - INFO - trainer -   Epoch: 10 | Step: 1600 | train loss: 0.0000 | test accuracy: 0.991
+02/23/2025 00:25:23 - INFO - trainer -   Epoch: 10 | Step: 1800 | train loss: 0.0000 | test accuracy: 0.992
+02/23/2025 00:25:23 - INFO - trainer -   ******  Start Saving Model...  ******
+02/23/2025 00:25:23 - INFO - trainer -   Saving model checkpoint to ./models\model.pt
+
+02/23/2025 00:25:23 - INFO - trainer -   ******  Start Loading Model...  ******
+02/23/2025 00:25:23 - INFO - trainer -   ******  The Model is Loaded!  ******
+02/23/2025 00:25:24 - INFO - __main__ -   Test Accuracy: 0.989
+02/23/2025 12:08:57 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 12:08:57 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 12:11:56 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 12:11:56 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 12:13:23 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 12:13:23 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 12:21:06 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 12:21:06 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 12:24:53 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 12:24:53 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 12:26:11 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 12:26:12 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 12:26:40 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 12:26:40 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 12:28:12 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 12:28:12 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 13:14:43 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 13:14:43 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 13:27:58 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 13:27:58 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 13:28:19 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 13:28:19 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 13:31:41 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 13:31:41 - INFO - __main__ -   Num of train_dataset examples: 60000
+02/23/2025 13:32:17 - INFO - __main__ -   Start loading the Train_Dataset!
+02/23/2025 13:32:17 - INFO - __main__ -   Num of train_dataset examples: 60000
