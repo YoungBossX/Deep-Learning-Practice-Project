@@ -40,7 +40,7 @@ def main(args, model_name):
     logger.info("Num of train_dataset examples: {}".format(len(train_dataset)))
 
     dev_dataset = CIFAR10Dataset(data_dir=args.data_dir, transform=transform_eval, mode='val')  # 加载验证集
-    logger.info("Num of dev_dataset examples: {}".format(len(dev_dataset)))
+    logger.info("Num of val_dataset examples: {}".format(len(dev_dataset)))
 
     test_dataset = CIFAR10Dataset(data_dir=args.data_dir, transform=transform_eval, mode='test')  # 加载测试集
     logger.info("Num of test_dataset examples: {}".format(len(test_dataset)))
@@ -60,6 +60,9 @@ def main(args, model_name):
         model = GoogLeNet.GoogLeNet()
     elif model_name == 'MyResNet18':
         model = ResNet18.ResNet18(ResNet18.BasicBlock)
+    elif model_name == 'ViT':
+        model = ViT.vit_base_patch16_224(num_classes=10)
+
 
     # 使用预训练模型
     # elif model_name == 'ViT':
@@ -79,9 +82,9 @@ def main(args, model_name):
     Resume = False
     # Resume = False
     if Resume:
-        checkpoint_path = args.model_weights
-        checkpoint = torch.load(os.path.join(args.model_weights, model_name+'.pt'), map_location=torch.device("cuda:0" if torch.cuda.is_available() else "cpu"))
-        model.load_state_dict(checkpoint)
+        weights_path = args.model_weights
+        weights = torch.load(os.path.join(args.model_weights, model_name+'.pt'), map_location=torch.device("cuda:0" if torch.cuda.is_available() else "cpu"))
+        model.load_state_dict(weights)
 
 
     # 定义损失函数和优化器
@@ -135,7 +138,7 @@ if __name__ == '__main__':
 
 
     # 选择使用哪个模型：CNN/AlexNet/VGG16/GoogLeNet/ResNet18/ViT
-    model_name = 'CNN'
+    model_name = 'ViT'
 
     # 调用主函数
     main(args, model_name)

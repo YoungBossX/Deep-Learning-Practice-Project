@@ -49,8 +49,6 @@ class Trainer(object):
                 x = batch[0].to(self.device)
                 y = batch[1].to(self.device)
                 output = self.model(x)
-                if self.model_name == 'ViT':
-                    output = output.logits
                 loss = self.loss_func(output, y.long())
                 self.optimizer.zero_grad()
                 loss.backward()
@@ -58,7 +56,7 @@ class Trainer(object):
 
                 if step % 50 == 49:  # 每50批进行一次测试
                     accuracy = self.evaluate(mode='dev')
-                    self.logger.info("Epoch: {} | Step: {} | train loss: {:.4f} | dev accuracy: {:.3f}"
+                    self.logger.info("Epoch: {} | Step: {} | train loss: {:.4f} | val accuracy: {:.3f}"
                                  .format(epoch+1, step+1, loss.data.cpu().numpy(), accuracy))
 
             # 每一轮判断是否要保存一次模型
@@ -94,8 +92,6 @@ class Trainer(object):
                 x = batch[0].to(self.device)
                 y = batch[1].to(self.device)
                 output = self.model(x)
-                if self.model_name == 'ViT':
-                    output = output.logits
                 y_pred = torch.argmax(output, 1).cpu().numpy()
                 correct += (y.cpu().numpy() == y_pred).sum()
                 total += y.size(0)
