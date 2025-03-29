@@ -125,8 +125,8 @@ if __name__ == '__main__':
     parser.add_argument("--seed", type=int, default=6, help="random seed for initialization")  # 随机种子
 
     # 模型训练超参数
-    parser.add_argument("--num_train_epochs", default=10, type=int, help="Total number of training epochs to perform.")  # 总训练轮数
-    parser.add_argument("--batch_size", default=32, type=int, help="Batch size for training and testing")  # 批次大小
+    parser.add_argument("--num_train_epochs", default=2, type=int, help="Total number of training epochs to perform.")  # 总训练轮数
+    parser.add_argument("--batch_size", default=64, type=int, help="Batch size for training and testing")  # 批次大小
     parser.add_argument("--learning_rate", default=0.0001, type=float, help="The initial learning rate")  # 学习率
 
     # 控制训练/测试参数
