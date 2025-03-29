@@ -5,7 +5,6 @@
 # @Software: PyCharm
 
 import argparse
-import sys
 import os
 import torch.optim
 from torch import nn
@@ -80,8 +79,8 @@ def main(args, model_name):
     Resume = False
     # Resume = False
     if Resume:
-        checkpoint_path = args.checkpoints_dir
-        checkpoint = torch.load(os.path.join(args.checkpoints_dir, model_name+'.pt'), map_location=torch.device("cuda:1" if torch.cuda.is_available() else "cpu"))
+        checkpoint_path = args.model_weights
+        checkpoint = torch.load(os.path.join(args.model_weights, model_name+'.pt'), map_location=torch.device("cuda:0" if torch.cuda.is_available() else "cpu"))
         model.load_state_dict(checkpoint)
 
 

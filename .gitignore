@@ -63,3 +63,6 @@ datasets/
 
 # Pycache
 __pycache__/
+
+# Model Files
+weights/

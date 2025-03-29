@@ -105,21 +105,21 @@ class Trainer(object):
 
     def save_model(self):
         # 判断是否存在文件夹，如果不存在则新建
-        if not os.path.exists(self.args.checkpoints_dir):
-            os.mkdir(self.args.checkpoints_dir)
+        if not os.path.exists(self.args.model_weights):
+            os.mkdir(self.args.model_weights)
 
         # 保存模型参数
         self.logger.info("******  Start Saving Model...  ******")
-        torch.save(self.model.state_dict(), os.path.join(self.args.checkpoints_dir, self.model_name+'.pt'))
-        self.logger.info("Saving models checkpoint to {}".format(os.path.join(self.args.checkpoints_dir, self.model_name+'.pt')))
+        torch.save(self.model.state_dict(), os.path.join(self.args.model_weights, self.model_name+'.pt'))
+        self.logger.info("Saving model_weights to {}".format(os.path.join(self.args.model_weights, self.model_name+'.pt')))
 
 
     def load_model(self):
         # 检查模型是否存在
-        if not os.path.exists(self.args.checkpoints_dir):
+        if not os.path.exists(self.args.model_weights):
             raise Exception("Model doesn't exists! Train first!")
 
         self.logger.info("******  Start Loading Model...  ******")
-        self.model.load_state_dict(torch.load(os.path.join(self.args.checkpoints_dir, self.model_name+'.pt')))
+        self.model.load_state_dict(torch.load(os.path.join(self.args.model_weights, self.model_name+'.pt'), weights_only=True))
         self.model.to(self.device)
         self.logger.info("******  The Model is Loaded!  ******")
