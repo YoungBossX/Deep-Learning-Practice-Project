@@ -11,12 +11,12 @@ import numpy as np
 from torch.utils.data import Dataset
 
 # 图像预处理
-transform_train_1 = transforms.Compose([
+transform_train1 = transforms.Compose([
     transforms.ToTensor(),  # 转为tensor (H, W, C) -> (C, H, W)
     transforms.Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.2010))]  # 标准化
 )
 
-transform_train_2 = transforms.Compose([
+transform_train2 = transforms.Compose([
     transforms.ToTensor(),  # 转为tensor (H, W, C) -> (C, H, W) 并归一化
     transforms.Resize(256),
     transforms.RandomCrop(227),
@@ -24,7 +24,7 @@ transform_train_2 = transforms.Compose([
     transforms.Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.2010))]  # 标准化
 )
 
-transform_train_3 = transforms.Compose([
+transform_train3 = transforms.Compose([
     transforms.ToTensor(),  # 转为tensor (H, W, C) -> (C, H, W) 并归一化
     transforms.Resize(256),
     transforms.RandomCrop(224),
@@ -64,16 +64,16 @@ def load_cifar10_batch(fold_path, batch_id=1, mode='train'):
 
     return np.array(imgs, dtype='float32'), np.array(labels)
 
-class CIFAR10_Dataset(Dataset):
+class CIFAR10Dataset(Dataset):
     def __init__(self, data_dir, transform=None, mode='train'):
-        self.folder_path = data_dir + '/cifar-10-batches-py'
+        self.folder_path = data_dir + '\cifar-10-batches-py'
         self.transform = transform
         self.mode = mode
         if mode == 'train':
             # 加载batch1-batch4作为训练集
             self.imgs, self.labels = load_cifar10_batch(self.folder_path, mode='train')
             for i in range(2, 5):
-                imgs_batch, labels_batch = load_cifar10_batch(folder_path=self.folder_path, batch_id=i, mode='train')
+                imgs_batch, labels_batch = load_cifar10_batch(fold_path=self.folder_path, batch_id=i, mode='train')
                 self.imgs, self.labels = np.concatenate([self.imgs, imgs_batch]), np.concatenate([self.labels, labels_batch])
         elif mode == 'val':
             # 加载batch5作为验证集
