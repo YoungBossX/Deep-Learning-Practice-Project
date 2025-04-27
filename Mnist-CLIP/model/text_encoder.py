@@ -8,7 +8,6 @@ from torch import nn
 import torch.nn.functional as F
 from torch.nn.functional import embedding
 
-
 class TextEncoder(nn.Module):
     def __init__(self):
         super(TextEncoder, self).__init__()

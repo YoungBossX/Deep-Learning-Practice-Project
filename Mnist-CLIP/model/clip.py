@@ -8,7 +8,6 @@ import torch
 from img_encoder import ImgEncoder
 from text_encoder import TextEncoder
 
-
 class CLIP(nn.Module):
     def __init__(self):
         super().__init__()
