@@ -1,7 +1,7 @@
 # -*-coding: utf-8 -*-
 # @Time    : 2025/4/26 23:21
 # @Author  : XCC
-# @File    : img_encoder.py.py
+# @File    : img_encoder.py
 # @Software: PyCharm
 import torch
 from torch import nn
